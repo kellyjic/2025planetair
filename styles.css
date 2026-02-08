@@ -1,12 +1,12 @@
 :root {
-  /* HERO GRAY GRADIENT */
+
   --bg-hero-start: #2b2b2b;
   --bg-hero-end: #1f1f1f;
 
-  /* QUESTIONS SECTION */
+
   --bg-questions: #181818;
 
-  /* TEXT */
+
   --text-main: skyblue;
   --text-muted: rgba(245, 245, 245, 0.704);
   --text-paragraph: #000000;
@@ -27,17 +27,14 @@ body {
   color: var(--text-main);
 }
 
-/* ---------- Paragraphs ---------- */
 
 p {
   color: var(--text-paragraph);
 }
 
-/* ---------- Analysis Text Between Graphs ---------- */
-/* ADD THIS WRAPPER AROUND YOUR <p> TAGS */
 
 .analysis-text {
-  max-width: 900px;
+
   margin: 48px auto;
   padding: 0 48px;
 }
@@ -47,13 +44,14 @@ p {
   margin-bottom: 20px;
 }
 
-/* ---------- Layout ---------- */
+.white-header {
+  color: white;
+}
 
 .cover {
   min-height: 100vh;
 }
 
-/* ---------- HERO SECTION ---------- */
 
 .hero {
   padding: 96px 80px 64px;
@@ -62,10 +60,29 @@ p {
     var(--bg-hero-start),
     var(--bg-hero-end)
   );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  text-align: center;    
+}
+
+.whywecare {
+  padding: 64px 80px 64px;
+  background: linear-gradient(
+    135deg,
+    var(--bg-hero-start),
+    var(--bg-hero-end)
+  );
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;   
+  text-align: center;     */
 }
 
 .title {
-  margin: 0;
+  margin-left: 35px;
   line-height: 0.95;
   letter-spacing: -0.03em;
 }
@@ -88,9 +105,10 @@ p {
   width: 72px;
   height: 6px;
   background: skyblue;
-  margin-top: 16px;
+  margin: 16px auto 0;
   border-radius: 3px;
 }
+
 
 .subtitle {
   max-width: 720px;
@@ -100,8 +118,6 @@ p {
   color: var(--text-muted);
 }
 
-/* ---------- QUESTIONS SECTION ---------- */
-
 .questions-section {
   padding: 56px 80px 72px;
   background-color: var(--bg-questions);
@@ -109,10 +125,9 @@ p {
 
 .questions-title {
   margin: 0 0 28px 0;
-  font-size: 36px;
+  font-size: 20px;
   font-weight: 800;
   letter-spacing: -0.01em;
-  text-transform: uppercase;
 }
 
 .questions-list {
@@ -128,7 +143,16 @@ p {
   margin-bottom: 18px;
 }
 
-/* ---------- Responsive ---------- */
+
+.graph-section {
+  margin-top: 60px;
+  margin-bottom: 80px;
+  padding: 35px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
 
 @media (max-width: 768px) {
   .hero,
