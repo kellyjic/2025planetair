@@ -200,3 +200,5 @@ fig = px.bar(
 )
 fig.update_layout(yaxis=dict(autorange="reversed"))
 fig.show()
+
+fig.write_html("index.html", include_plotlyjs="cdn")
