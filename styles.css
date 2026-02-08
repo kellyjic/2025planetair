@@ -1,0 +1,146 @@
+:root {
+  /* HERO GRAY GRADIENT */
+  --bg-hero-start: #2b2b2b;
+  --bg-hero-end: #1f1f1f;
+
+  /* QUESTIONS SECTION */
+  --bg-questions: #181818;
+
+  /* TEXT */
+  --text-main: skyblue;
+  --text-muted: rgba(245, 245, 245, 0.704);
+  --text-paragraph: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+}
+
+/* ---------- Paragraphs ---------- */
+
+p {
+  color: var(--text-paragraph);
+}
+
+/* ---------- Analysis Text Between Graphs ---------- */
+/* ADD THIS WRAPPER AROUND YOUR <p> TAGS */
+
+.analysis-text {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 0 48px;
+}
+
+.analysis-text p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* ---------- Layout ---------- */
+
+.cover {
+  min-height: 100vh;
+}
+
+/* ---------- HERO SECTION ---------- */
+
+.hero {
+  padding: 96px 80px 64px;
+  background: linear-gradient(
+    135deg,
+    var(--bg-hero-start),
+    var(--bg-hero-end)
+  );
+}
+
+.title {
+  margin: 0;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.title-top {
+  display: block;
+  font-size: clamp(64px, 7vw, 120px);
+  font-weight: 700;
+}
+
+.title-bottom {
+  display: block;
+  font-size: clamp(96px, 10vw, 180px);
+  font-weight: 900;
+}
+
+.title-bottom::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 6px;
+  background: skyblue;
+  margin-top: 16px;
+  border-radius: 3px;
+}
+
+.subtitle {
+  max-width: 720px;
+  margin-top: 28px;
+  font-size: clamp(16px, 1.6vw, 22px);
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+/* ---------- QUESTIONS SECTION ---------- */
+
+.questions-section {
+  padding: 56px 80px 72px;
+  background-color: var(--bg-questions);
+}
+
+.questions-title {
+  margin: 0 0 28px 0;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.questions-list {
+  max-width: 900px;
+  margin: 0;
+  padding-left: 28px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.questions-list li {
+  margin-bottom: 18px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+  .hero,
+  .questions-section {
+    padding: 56px 28px;
+  }
+
+  .analysis-text {
+    padding: 0 20px;
+  }
+
+  .questions-title {
+    font-size: 28px;
+  }
+}
